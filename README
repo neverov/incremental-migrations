@@ -1,4 +1,1 @@
-This is your new Play application
-=====================================
-
-This file will be packaged with your application, when using `play dist`.
+Naive implementation of incremental migrations (each document in db has its own version and increments it on read) using scala play and reactive-mongo.
