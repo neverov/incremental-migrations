@@ -37,7 +37,7 @@ object MigrationHelpers {
 
   def getId(json: JsObject) = (json \ "_id").asOpt[BSONObjectID] match {
     case Some(id) => id
-    case None => throw new IllegalStateException("Where the fuck is my id?")
+    case None => throw new IllegalStateException(s"Failed to find mongodb object id on a document: $json")
   }
 }
 
